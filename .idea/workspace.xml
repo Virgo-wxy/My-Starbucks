@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79194103-80b4-4fff-9b7c-c7432069c4e4" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Starbucks$0001_initial.coverage" NAME="0001_initial Coverage Results" MODIFIED="1546667076818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MyStarbucks/migrations" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1759784264">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.60" value="1" />
+          <entry key="project.open.time.63" value="2" />
+          <entry key="project.open.time.66" value="1" />
+          <entry key="project.open.time.68" value="3" />
+          <entry key="project.open.time.71" value="1" />
+          <entry key="project.open.time.74" value="1" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Django Console" value="35" />
+          <entry key="css" value="7" />
+          <entry key="html" value="4771" />
+          <entry key="js" value="47" />
+          <entry key="py" value="4099" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="7" />
+          <entry key="HTML" value="4771" />
+          <entry key="JavaScript" value="47" />
+          <entry key="Python" value="4134" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="8" />
+          <entry key="html" value="178" />
+          <entry key="jpeg" value="1" />
+          <entry key="jpg" value="34" />
+          <entry key="js" value="20" />
+          <entry key="png" value="2" />
+          <entry key="pstat" value="2" />
+          <entry key="py" value="55" />
+          <entry key="rnc" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="8" />
+          <entry key="HTML" value="178" />
+          <entry key="Image" value="37" />
+          <entry key="JavaScript" value="20" />
+          <entry key="Profiler Session" value="2" />
+          <entry key="Python" value="55" />
+          <entry key="RNG Compact" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Starbucks" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyStarbucks/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/shopping.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5950">
+              <caret line="238" column="52" selection-start-line="238" selection-start-column="52" selection-end-line="238" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-150">
+              <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyStarbucks/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="154" selection-start-line="154" selection-end-line="154" />
+              <folding>
+                <element signature="e#460#511#0" />
+                <element signature="e#543#657#0" />
+                <element signature="e#690#797#0" />
+                <element signature="e#828#875#0" />
+                <element signature="e#914#966#0" />
+                <element signature="e#1000#1051#0" />
+                <element signature="e#1092#1147#0" />
+                <element signature="e#1179#1807#0" />
+                <element signature="e#1742#1807#0" />
+                <element signature="e#1840#1913#0" />
+                <element signature="e#1946#2847#0" />
+                <marker date="1547539704433" expanded="false" signature="2847:2850" ph="..." />
+                <marker date="1547539704433" expanded="true" signature="2857:5178" ph="..." />
+                <marker date="1547539704433" expanded="true" signature="3475:5178" ph="..." />
+                <marker date="1547539704433" expanded="true" signature="5119:5178" ph="..." />
+                <marker date="1547539704433" expanded="false" signature="8186:8191" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyStarbucks/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+                <marker date="1547513794718" expanded="true" signature="633:638" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python36/Lib/site-packages/django/core/handlers/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/static/js/my.js" />
+        <option value="$PROJECT_DIR$/Starbucks/urls.py" />
+        <option value="$PROJECT_DIR$/MyStarbucks/forms.py" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/regist.html" />
+        <option value="$PROJECT_DIR$/static/css/manage_base.css" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/login.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/show2_news.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/update_news.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/guestbook.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/new_view.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/manage_index.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/answer_guestbook.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/add_user.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/del_news2.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/del_news.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/test11.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/test22.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/test.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/food.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/product_list.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/coofee.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/shopping.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/drink.html" />
+        <option value="$PROJECT_DIR$/Starbucks/settings.py" />
+        <option value="$PROJECT_DIR$/MyStarbucks/models.py" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/index.html" />
+        <option value="$PROJECT_DIR$/static/css/main.css" />
+        <option value="$PROJECT_DIR$/MyStarbucks/urls.py" />
+        <option value="$PROJECT_DIR$/MyStarbucks/views.py" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/shopping.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/manage_base.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/result.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/look_guestbook.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/del_user.html" />
+        <option value="$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/detail.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1212" />
+    <option name="height" value="855" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Starbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Starbucks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Starbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Starbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="MyStarbucks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Starbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Starbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="MyStarbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Starbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Starbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="MyStarbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Starbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Starbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="MyStarbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="MyStarbucks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Starbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Starbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="MyStarbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="MyStarbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Starbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Starbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="C:/桌面文件/桌面/projects" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Django\Starbucks\static\image" />
+      <recent name="E:\Django\Starbucks\MyStarbucks\static\image" />
+      <recent name="E:\Django\Starbucks\MyStarbucks\templates\MyStarbucks" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Django\Starbucks\static\image" />
+      <recent name="E:\Django\Starbucks\MyStarbucks\static\image" />
+      <recent name="E:\Django\Starbucks\static\css" />
+      <recent name="E:\Django\Starbucks\static\js" />
+      <recent name="E:\Django\Starbucks\MyStarbucks\templates\MyStarbucks" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.Starbucks">
+    <configuration name="0001_initial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Starbucks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyStarbucks/migrations" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyStarbucks/migrations/0001_initial.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Starbucks" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Starbucks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Starbucks.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.Starbucks" />
+      <item itemvalue="Python.0001_initial" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.0001_initial" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79194103-80b4-4fff-9b7c-c7432069c4e4" name="Default Changelist" comment="" />
+      <created>1545789831195</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545789831195</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9072581" visible="true" weight="0.17191978" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.09274194" side_tool="true" weight="0.18553008" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.87464184" weight="0.44758064" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39919356" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49928367" weight="0.3293011" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.1239255" side_tool="true" weight="0.2997312" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8760745" weight="0.38709676" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3293011" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9072581" visible="true" weight="0.19126074" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.09274194" side_tool="true" weight="0.18553008" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.87535816" visible="true" weight="0.06317204" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49928367" weight="0.3293011" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.124641836" side_tool="true" weight="0.21102151" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49856734" weight="0.24596775" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3293011" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MyStarbucks/views.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/test11.html" />
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/test22.html" />
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/new_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/static/js/hm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/migrations/0002_auto_20190106_1451.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/test.html" />
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/update_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/manage_index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/del_news2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/guestbook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/del_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/add_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/embed.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/food.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6025">
+          <caret line="241" column="32" selection-start-line="241" selection-start-column="32" selection-end-line="241" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/product_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="152" column="23" selection-start-line="152" selection-start-column="23" selection-end-line="152" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/coofee.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python36/Lib/site-packages/cart/cart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery-1.12.4.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Starbucks/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Starbucks/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/drink.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/regist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="39" column="125" lean-forward="true" selection-start-line="39" selection-start-column="125" selection-end-line="39" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="350" selection-start-line="350" selection-end-line="355" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/static/image/w3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/static/image/w1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2400">
+          <caret line="162" column="36" lean-forward="true" selection-start-line="162" selection-start-column="36" selection-end-line="162" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/image/da2abe4db7b3b7fea4220275bf0d21f6.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/image/dc5173b6a37bdf54d59b3d109e47cb9c.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/image/u=3704637088,2059845518&amp;fm=26&amp;gp=0.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/image/u=3853943478,248209119&amp;fm=26&amp;gp=0.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/image/u=1348298998,1278172728&amp;fm=26&amp;gp=0.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/image/陈.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/image/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/image/w3.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/image/w1.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/image/w2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/answer_guestbook.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/manage_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/del_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/manage/look_guestbook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/shopping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5950">
+          <caret line="238" column="52" selection-start-line="238" selection-start-column="52" selection-end-line="238" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/templates/MyStarbucks/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python36/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+          <folding>
+            <element signature="e#460#511#0" />
+            <element signature="e#543#657#0" />
+            <element signature="e#690#797#0" />
+            <element signature="e#828#875#0" />
+            <element signature="e#914#966#0" />
+            <element signature="e#1000#1051#0" />
+            <element signature="e#1092#1147#0" />
+            <element signature="e#1179#1807#0" />
+            <element signature="e#1742#1807#0" />
+            <element signature="e#1840#1913#0" />
+            <element signature="e#1946#2847#0" />
+            <marker date="1547539704433" expanded="false" signature="2847:2850" ph="..." />
+            <marker date="1547539704433" expanded="true" signature="2857:5178" ph="..." />
+            <marker date="1547539704433" expanded="true" signature="3475:5178" ph="..." />
+            <marker date="1547539704433" expanded="true" signature="5119:5178" ph="..." />
+            <marker date="1547539704433" expanded="false" signature="8186:8191" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStarbucks/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1547513794718" expanded="true" signature="633:638" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

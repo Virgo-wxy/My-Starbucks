@@ -1,0 +1,78 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>饮料</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<style type="text/css">
+		.border a:hover{
+			border-color:transparent;
+		}
+	</style>
+</head>
+<body>
+<div class="container" style='padding-left:50px'>
+   <div class="row">
+   	  <div class="col-md-11 border">
+
+
+			<h3 class="caption">咖啡融合冰淇淋</h3>
+			<ul class="grid padded-3 product">
+                {% for i in products %}
+                        {% if i.id <= 4 %}
+                            <li>
+                                <a id="menu-product-related-affogato" href="{% url 'MyStarbucks:detail' i.id %}"
+                                   class="thumbnail">
+                                    <div class="preview">
+                                        <img src="{% static i.image %}">
+                                    </div>
+                                    <strong>{{ i.title }}</strong>
+                                </a>
+                            </li>
+                    {% endif %}
+                {% endfor %}
+			</ul>
+			<hr style='width:100%'>
+
+			<h3 class="caption">绵云冷萃冰咖啡</h3>
+			<ul class="grid padded-3 product">
+                {% for i in products %}
+                        {% if i.id > 4 and i.id <= 7 %}
+                            <li>
+                                <a id="menu-product-related-affogato" href="{% url 'MyStarbucks:detail' i.id %}"
+                                   class="thumbnail">
+                                    <div class="preview">
+                                        <img src="{% static i.image %}">
+                                    </div>
+                                    <strong>{{ i.title }}</strong>
+                                </a>
+                            </li>
+                    {% endif %}
+                {% endfor %}
+			</ul>
+			<hr style='width:100%'>
+
+			<h3 class="caption">手工调制浓缩咖啡</h3>
+			<ul class="grid padded-3 product">
+                {% for i in products %}
+                        {% if i.id > 7 %}
+                            <li>
+                                <a id="menu-product-related-affogato" href="{% url 'MyStarbucks:detail' i.id %}"
+                                   class="thumbnail">
+                                    <div class="preview">
+                                        <img src="{% static i.image %}">
+                                    </div>
+                                    <strong>{{ i.title }}</strong>
+                                </a>
+                            </li>
+                    {% endif %}
+                {% endfor %}
+			</ul>
+
+
+   	  </div>
+   </div>
+</div>
+</body>
+</html>

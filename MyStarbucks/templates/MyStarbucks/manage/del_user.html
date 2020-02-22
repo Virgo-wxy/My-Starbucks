@@ -1,0 +1,28 @@
+{% extends 'MyStarbucks/manage/manage_base.html' %}
+{% block content %}
+    <h5> >>> 删除用户</h5>
+    <table class="del_list">
+{#        <div class="page" style="position: absolute;top: 508px;">#}
+{#            <a style="margin-left: 180px" href="{{ url_for('user',page=1)}}">首页</a>#}
+{#            <a style="margin: 0px 10px" href="{{ url_for('user',page=prev)}}">上一页</a>#}
+{#            {{ page }}#}
+{#            <a style="margin-left: 10px" href="{{ url_for('user',page=next)}}">下一页</a>#}
+{#            <a style="margin: 0px 10px" href="{{ url_for('user',page=pages)}}">末页</a>#}
+{#            总页数:{{ pages }}#}
+{#        </div>#}
+        <tr>
+            <th style="padding: 20px;width: 100px;text-align: center">ID</th>
+            <th style="padding: 20px;width: 200px;text-align: center">用户名</th>
+            <th style="padding: 20px;width: 200px;text-align: center">操作</th>
+
+        </tr>
+        {% for user_info in user %}
+            <tr>
+                <td style="padding: 10px;text-align: center">{{ user_info.id }}</td>
+                <td style="width:450px;padding: 10px;text-align: center">{{ user_info.username }}</td>
+                <td style="width:250px;padding: 10px;text-align: center"><a href="{% url 'MyStarbucks:del_user' user_info.id %}" style="color: red">删除</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+

@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>详情页</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <style>
+        .container{
+            margin-top: 100px;
+            margin-left: 280px;
+        }
+    </style>
+</head>
+<body>
+
+<div  class="container">
+    <div class="row">
+
+        <form method="post">
+            {% csrf_token %}
+                <div class='col-md-5'>
+                    <div style="border: 1px solid gainsboro;padding: 10px">
+                        <img src="{% static datail.image %}" style="width: 100%">
+                    </div>
+                </div>
+                <div class='col-md-7'>
+                    <ul style='list-style:none;padding-top: 30px'>
+                        <li>
+                            <h1>名称：{{ datail.title }}</h1>
+                        </li>
+                        <li>
+                            <h2>价格：￥{{ datail.price }}</h2>
+                        </li>
+                        <li>
+                            <h2>尺寸：  【常温】  / 【 加冰】  </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                加入购物车：<a href=" {% url 'MyStarbucks:add' datail.id 1 %}">
+                            <img src="{% static 'image/logo1.png' %}" style="width:50px"></a>
+                            </h2>
+                        </li>
+                        <li>
+                            <h1 style="padding-left: 240px;padding-top: 160px"><a href="{% url 'MyStarbucks:drink' %}">>>>>返回</a></h1>
+                        </li>
+                    </ul>
+                </div>
+        </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>

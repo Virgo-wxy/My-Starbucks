@@ -1,0 +1,27 @@
+{% extends 'MyStarbucks/manage/manage_base.html' %}
+{% block css %}
+    <style>
+        td{
+            font-algin: center;
+        }
+    </style>
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+    <h5> >>> 查看留言 </h5>
+    <table>
+        <tr>
+            <th style="padding: 10px">ID</th>
+            <th style="text-align: center">标题</th>
+            <th style="text-align: center">内容</th>
+        </tr>
+        {% for guestbook_info in guestbooks %}
+            <tr>
+                <td style="width:100px;padding:8px">{{ guestbook_info.id }}</td>
+                <td style="width: 400px;padding: 8px;text-align: center">{{ guestbook_info.title }}</td>
+                <td style="width: 600px;padding: 12px">{{ guestbook_info.content }}</td>
+                <td style="width: 400px;padding-left: 50px"><a href="{% url 'MyStarbucks:answer_guestbook' guestbook_info.id %}">回复</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

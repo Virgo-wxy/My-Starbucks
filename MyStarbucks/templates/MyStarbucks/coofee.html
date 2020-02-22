@@ -1,0 +1,228 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>咖啡</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/lunr.js' %}"></script>
+	<script type="text/javascript" src="{% static '/menu-search-zh.js' %}"></script>
+	<style type="text/css">
+		.border a:hover{
+			border-color:transparent;
+		}
+	</style>
+	
+</head>
+<body>
+<div class="container" style='padding-left:50px'>
+   <div class="row">
+   	  <div class="col-md-11 border">
+
+
+		    <h3 class="caption">中度烘焙</h3>
+		    <ul class="grid padded-3">
+		        <li>
+		            <a  href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/south-of-the-clouds.jpg' %}">
+                        </div>
+		                <strong>星巴克®凤舞祥云咖啡豆</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/pike-place-roast-coffee-beans.png' %}">
+                        </div>
+		                <strong>星巴克®烘焙咖啡豆</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a  href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/kenya-coffee-beans.png' %}">
+
+                        </div>
+		                <strong>星巴克®肯亚咖啡豆</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a   href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/south-of-the-clouds.jpg' %}">
+
+                        </div>
+		                <strong>星巴克®首选咖啡豆</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/guatemala-antigua-coffee-beans.png' %}">
+                        </div>
+		                <strong>®危地马拉安提瓜咖啡豆</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a   href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/kenya-coffee-beans.png' %}">
+                        </div>
+		                <strong>星巴克®埃塞俄比亚咖啡豆</strong>
+		            </a>
+		        </li>
+		    </ul>
+		    <hr style='width:100%'>
+
+		    <h3 class="caption">深度烘焙</h3>
+		    <ul class="grid padded-3">
+		        <li>
+		            <a  href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/sumatra-coffee-beans.png' %}">
+		                </div>
+		                <strong>星巴克®苏门答腊咖啡豆</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/komodo-dragon-blend-coffee-beans.png' %}">
+                        </div>
+		                <strong>星巴克®低因祥龙咖啡豆</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/caffe-verona-coffee-beans.png' %}">
+                        </div>
+		                <strong>星巴克®意式烘焙咖啡豆</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a  href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/caffe-verona-coffee-beans.png' %}">
+                        </div>
+		                <strong>星巴克®佛罗娜咖啡豆</strong>
+		            </a>
+		        </li>
+		    </ul>
+		    <hr style='width:100%'>
+
+		    <h3 class="caption">VIA® Dairy</h3>
+		    <ul class="grid padded-3">
+		        <li>
+		            <a  href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/via-vanilla-latte.jpg' %}">
+                        </div>
+		                <strong>星巴克VIA®香草拿铁风味免煮咖啡固体饮料</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/via-caramel-latte.jpg' %}">
+                        </div>
+		                <strong>星巴克VIA®焦糖拿铁风味免煮咖啡固体饮料</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a  href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/via-caffe-mocha.jpg' %}">
+                        </div>
+		                <strong>星巴克VIA®摩卡风味免煮咖啡固体饮料</strong>
+		            </a>
+		        </li>
+		    </ul>
+		    <hr style='width:100%'>
+
+		    <h3 class="caption">VIA® Black</h3>
+		    <ul class="grid padded-3">
+		        <li>
+		            <a href="http://www.baidu.com"
+		               class="thumbnail">
+		                <div class="preview circle" style="background-image: url({% static 'image/via-italian-roast.jpg' %})"></div>
+		                <strong>星巴克VIA®意式烘焙免煮咖啡</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a  href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview circle" style="background-image: url({% static 'image/via-colombia.jpg' %})"></div>
+		                <strong>星巴克VIA®哥伦比亚免煮咖啡</strong>
+		            </a>
+		        </li>
+		    </ul>
+		    <hr style='width:100%'>
+
+		    <h3 class="caption">星巴克臻选™咖啡</h3>
+		    <ul class="grid padded-3">
+		        <li>
+		            <a  href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/reserve-sun-dried-brazil-cachoeirab-grama-farm.jpg' %}">
+                        </div>
+		                <strong>星巴克臻选™ 日晒巴西格兰玛瀑布农场</strong>
+		            </a>
+		        </li>
+		        <li>
+		            <a href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/reserve-hawaii-kau.jpg' %}">
+                        </div>
+		                <strong>星巴克臻选™ 夏威夷卡乌咖啡豆</strong>
+		            </a>
+		        </li>
+
+		        <li>
+		            <a href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/reserve-colombia-pedregal.jpg' %}">
+                        </div>
+		                <strong>星巴克臻选™ 哥伦比亚佩德雷加尔</strong>
+		            </a>
+		        </li>
+
+		        <li>
+		            <a href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/reserve-christmas-blend-2018.jpg' %}">
+                        </div>
+		                <strong>星巴克臻选™ 臻选2018圣诞专享咖啡豆</strong>
+		            </a>
+		        </li>
+		    </ul>
+		    <hr style='width:100%'>
+
+		    <h3 class="caption">中度烘焙</h3>
+		    <ul class="grid padded-3">
+		        <li>
+		            <a  href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/origami-pike-place.jpg' %}">
+                        </div>
+		                <strong>星巴克ORIGAMI™便携式滴滤咖啡（研磨咖啡粉）星巴克®派克市场烘焙咖啡系列</strong>
+		            </a>
+		        </li>
+                <li>
+		            <a href="http://www.baidu.com" class="thumbnail">
+		                <div class="preview">
+                            <img src="{% static 'image/origami-verona.jpg' %}">
+                        </div>
+		                <strong>星巴克ORIGAMI™便携式滴滤咖啡（研磨咖啡粉）星巴克®佛罗娜烘焙咖啡系列</strong>
+		            </a>
+		        </li>
+		    </ul>
+		    <hr style='width:100%'>
+
+   	  </div>
+   </div>
+</div>
+</body>
+</html>

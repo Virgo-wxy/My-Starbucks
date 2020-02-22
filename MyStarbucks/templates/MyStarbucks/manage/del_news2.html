@@ -1,0 +1,29 @@
+{% extends 'MyStarbucks/manage/manage_base.html' %}
+{% block css %}
+    <style>
+        td{
+            font-algin: center;
+        }
+    </style>
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+    <h5> >>> 修改新闻 </h5>
+    <table>
+        <tr>
+            <th style="padding: 6px">ID</th>
+            <th style="text-align: center">标题</th>
+{#            <th>图片</th>#}
+            <th style="text-align: center">内容</th>
+        </tr>
+        {% for news_info in news %}
+            <tr>
+                <td style="padding:8px">{{ news_info.id }}</td>
+                <td style="width: 320px;padding: 8px">{{ news_info.title }}</td>
+{#                <td>{% static news_info.image %}</td>#}
+                <td style="width: 400px;padding: 8px">{{ news_info.content }}</td>
+                <td style="padding: 8px"><a href="{% url 'MyStarbucks:update_news' news_info.id %}">修改</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

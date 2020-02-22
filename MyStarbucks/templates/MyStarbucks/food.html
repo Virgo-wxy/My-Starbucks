@@ -1,0 +1,306 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>美食</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<style type="text/css">
+		.border a:hover{
+			border-color:transparent;
+		}
+	</style>
+</head>
+<body>
+<div class="container" style='padding-left:50px'>
+   <div class="row">
+   	  <div class="col-md-11 border">
+
+
+   	  	<h3 class="caption">烘焙</h3>
+		<ul class="grid padded-3">
+		    <li>
+		        <a id="menu-product-related-american-style-pancakes"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/american-style-pancakes.jpg' %}">
+                    </div>
+		            <strong>美式松饼</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-blueberry-muffin"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/blueberry-muffin.jpg' %}">
+                    </div>
+		            <strong>蓝莓麦芬</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-chocolate-muffin"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/chocolate-muffin.jpg' %}">
+                    </div>
+		            <strong>香浓巧克力麦芬</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-cinnamon-swirl" href="http://www.baidu.com"
+		           class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/cinnamon-swirl.jpg' %}">
+                    </div>
+		            <strong>旋风玉桂酥</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-french-butter-croissant"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/french-butter-croissant.jpg' %}">
+                    </div>
+		            <strong>法式香酥可颂</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-new-york-cheesecake"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/french-caramel-bread.jpg' %}">
+                    </div>
+		            <strong>纽约风浓郁重芝士蛋糕</strong>
+		        </a>
+		    </li>
+		</ul>
+		<hr  style='width:100%'>
+
+		<h3 class="caption">蛋糕&amp;甜品</h3>
+		<ul class="grid padded-3">
+		    <li>
+		        <a id="menu-product-related-blueberry-cheesecake"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/blueberry-and-cookie-style-cheesecake.jpg' %}">
+                    </div>
+		            <strong>蓝莓曲奇风轻乳酪蛋糕</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-classic-swiss-roll-cake"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/classic-swiss-roll-cake.jpg' %}">
+                    </div>
+		            <strong>经典瑞士卷</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-dark-chocolate-cake"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/triple-dark-chocolate-cake.jpg' %}">
+                    </div>
+		            <strong>浓醇三重黑巧克力蛋糕</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-eclair" href="http://www.baidu.com"
+		           class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/eclair.jpg' %}">
+                    </div>
+		            <strong>法式闪电泡芙</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-italian-tiramisu"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/starbucks-coffee-tiramisu.jpg' %}">
+                    </div>
+		            <strong>星巴克咖啡提拉米苏蛋糕</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-macaron" href="http://www.baidu.com"
+		           class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/macaron.jpg' %}">
+                    </div>
+		            <strong>法式马卡龙</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-new-york-cheesecake"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/new-york-style-creamy-cheesecake.jpg' %}">
+                    </div>
+		            <strong>纽约风浓郁重芝士蛋糕</strong>
+		        </a>
+		    </li>
+		</ul>
+		<hr  style='width:100%'>
+
+		<h3 class="caption">其他美食</h3>
+		<ul class="grid padded-3">
+		    <li>
+		        <a id="menu-product-related-cashews" href="http://www.baidu.com"
+		           class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/cashews.jpg' %}">
+                    </div>
+		            <strong>腰果</strong>
+		        </a>
+		    </li>
+
+
+		    <li>
+		        <a id="menu-product-related-fruit-and-nuts"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview ">
+                            <img src="{% static 'image/fruitnnuts.jpg' %}">
+                    </div>
+		            <strong>混合果仁果脯</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-fruit-salad" href="http://www.baidu.com"
+		           class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/fruit-salad.jpg' %}">
+                    </div>
+		            <strong>水果沙拉</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-lollipops-cherry-cerise-cola-orange-lemon-citron-strawberry-frais"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/lollipops.jpg' %}">
+                    </div>
+		            <strong>棒棒糖</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-english-butter-shortbread"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/shortbread.png' %}">
+                    </div>
+		            <strong>英伦风味黄油饼干</strong>
+		        </a>
+		    </li>
+
+
+		    <li>
+		        <a id="menu-product-related-starbucks-coffee-wafer-rolls"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/waferrolls.jpg' %}">
+                    </div>
+		            <strong>咖啡味蛋卷</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-sugar-free-chewing-gum-peppermint"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/starbucks-chewing-gum.jpg' %}">
+                    </div>
+		            <strong>薄荷味口香糖（无糖）</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-sugar-free-classic-mints-peppermint"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview ">
+                            <img src="{% static 'image/Starbucks-mints.jpg' %}">
+                    </div>
+		            <strong>薄荷味硬糖（无糖）</strong>
+		        </a>
+		    </li>
+		</ul>
+		<hr  style='width:100%'>
+
+		<h3 class="caption">三明治、帕尼尼、卷</h3>
+		<ul class="grid padded-3">
+		    <li>
+		        <a id="menu-product-related-avocado-and-chicken-bagel"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/avocado-and-chicken-bagel.jpg' %}">
+                    </div>
+		            <strong>牛油果鸡肉焙果</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-bacon-and-egg-croissant-bun"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/bacon-and-egg-croissant-bun.jpg' %}">
+                    </div>
+		            <strong>培根蛋可颂堡</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-bacon-and-egg-wrap"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/bacon-and-egg-wrap.jpg' %}">
+                    </div>
+		            <strong>蜜汁培根蛋卷</strong>
+		        </a>
+		    </li>
+		</ul>
+		<hr  style='width:100%'>
+
+		<h3 class="caption">酸奶</h3>
+		<ul class="grid padded-3">
+		    <li>
+		        <a id="menu-product-related-greek-flavored-yoghurt-mixed-berry"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/greek-flavored-yoghurt-mixed-berry.jpg' %}">
+                    </div>
+		            <strong>谷物组合希腊式风味酸奶（混合莓果）</strong>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a id="menu-product-related-greek-flavored-yoghurt-yellow-peach"
+		           href="http://www.baidu.com" class="thumbnail">
+		            <div class="preview">
+                            <img src="{% static 'image/greek-flavored-yoghurt-yellow-peach.jpg' %}">
+                    </div>
+		            <strong>谷物组合希腊式风味酸奶（黄桃）</strong>
+		        </a>
+		    </li>
+		</ul>
+
+
+   	  </div>
+   </div>
+</div>
+</body>
+</html>

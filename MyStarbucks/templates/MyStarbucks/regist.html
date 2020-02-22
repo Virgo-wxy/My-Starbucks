@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>注册页面</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+<div class="container">
+   <div class="row">
+        <div>
+            <section class="hero account-welcome-msr">
+              <img src="{% static 'image/header_cn.jpg' %}">
+            </section>
+        </div>
+
+        <form  method="post" class="join-form register-form submit-box">
+            {% csrf_token %}
+            <div class="wrapper wrapper-mobile">
+                <div class="body">
+                      <div class="field floating">
+                          <div class="ok">
+                                <input type="text" id="cardNumber" name="username" placeholder="输入您的用户名或者邮箱（请勿输入空格或下划线）">
+                                <label>输入您的用户名或者邮箱（请勿输入空格或下划线）</label>
+                          </div>
+                      </div>
+                      <div class="password-container">
+                          <div class="field floating">
+                              <div class="ok"><input type="password" id="cardPassword" name="password" placeholder="输入密码">
+                                  <label>输入密码</label>
+                              </div>
+                          </div>
+                          <a id="sign-up-what-is-this" class="link">这是什么？</a>
+                      </div>
+                      <p class="register-notice"><span>如果您曾购买了星享卡，在购买星享卡后的60天内，您可使用该星享卡注册您的星享俱乐部帐户，或者将该星享卡关联到您既有的星享俱乐部帐户下。</span>
+                      </p>
+                      <div class="actions revert">
+                            <input  id="about-join-us" class="button self-center tablet-self-start" type="submit" value="注册">
+                      </div>
+                </div>
+            </div>
+        </form>
+
+   </div>
+</div>
+</body>
+</html>

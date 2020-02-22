@@ -1,0 +1,21 @@
+{% extends 'MyStarbucks/manage/manage_base.html' %}
+{% block content %}
+    <h5> >>> 修改新闻 </h5>
+    <form class="manage_form" action="" method="post">
+        {% csrf_token %}
+        <ul>
+            <li>
+                <label>新闻标题:</label>
+                <input type="text" name="title" value="{{ id.title }}"/>
+            </li>
+            <li>
+                <label>新闻内容:</label>
+                <textarea rows="12" cols="38" name="content">{{ id.content }}</textarea>
+            </li>
+            <li class="reg_sub">
+                <br />
+                <input class="update" type="submit" value="修 改" name="mysubmit">
+            </li>
+        </ul>
+    </form>
+{% endblock %}

@@ -1,0 +1,253 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}"/>
+    <title>购物车</title>
+    <script>
+
+        function f() {  //进入页面时刷新购物车数量  规定此时商品id和数量都为0
+            $.get('/cart/add0_0/', function (data) {
+                $('.total_count em').text(data.count);
+            });
+        }
+
+        //计算小计
+        function total_s() {
+            $('.col07').each(function () {
+                $count = $(this).prev().find('input').val();
+                $price = $(this).prev().prev().text();
+                total0 = parseFloat($count) * parseFloat($price);   //小计
+                $(this).text(total0.toFixed(2));
+            });
+        }
+
+        //计算总计
+        function total_all() {
+            total_count = 0;
+            total_price = 0;
+
+            $(':checked:not(#check_all)').each(function () {
+                $count = $(this).parent().siblings('.col06').find('input').val();
+                $price = $(this).parent().siblings('.col05').text();
+                // console.log($count);
+                // console.log($price);
+                total = parseFloat($count) * parseFloat($price);
+                total_count++;
+                total_price += total;
+            });
+            $('#total').text(total_price.toFixed(2));
+            $('#total_count').text(total_count);
+        }
+
+        $(function () {
+            f();
+            total_s();
+            total_all();
+            //全选全消
+            $('#check_all').click(function () {
+                state = $(this).prop('checked');
+                $(':checkbox:not(#check_all)').prop('checked', state);
+                total_all();
+            });
+
+            // 单个选择
+            $(':checkbox:not(#check_all)').click(function () {
+                if ($(this).prop('checked')) {
+                    if ($(':checked').length + 1 == $(':checkbox').length) {
+                        $('#check_all').prop('checked', true);
+                    }
+                } else {
+                    $('#check_all').prop('checked', false);
+                }
+                total_all();
+            });
+
+            //数量加
+            $('.add').click(function () {
+                num = parseInt($(this).next().val());
+                $(this).next().val(num + 1).blur();
+                total_s();
+                total_all();
+            });
+
+            //数量减
+            $('.minus').click(function () {
+                num = parseInt($(this).prev().val());
+                if (num > 1) {
+                    $(this).prev().val(num - 1).blur();
+                }
+                total_s();
+                total_all();
+            });
+
+            //自己修改数量
+            $('.num_show').blur(function () {
+                num = parseInt($(this).val());
+                if (num < 1) {
+                    num = 1;
+                    $(this).val(num);
+                }
+                total_s();
+                total_all();
+                //向数据库发送数据，修改商品数量
+                cart_id = $(this).parents('.cart_list_td').attr('id');
+
+                $.get('/cart/edit' + cart_id + '_' + num + '/', function (data) {
+                    if (data.ok == 1) {
+                        total_s();
+                        total_all();
+                    } else {      //修改失败，显示原来的数量
+                        alert(data.e);
+                    }
+                })
+            });
+
+            //商品删除
+            $('.delete').click(function () {
+                state = confirm('您确定要删除吗？');
+                if (state) {
+                    id = $(this).parent().parent().attr('id');
+                    $.get('/cart/delete' + id + '/', function (data) {
+                        if (data.ok == 1) {
+                            $('ul').remove('#' + id);
+                            total_all();
+                        } else {
+                            alert(data.e);
+                        }
+                    })
+                }
+
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#jiahao').click(function () {
+                num = parseFloat($('#shuliang').val());
+                $('#shuliang').val(num + 1);
+                $('#shuliang').blur();
+            });
+
+            $('#jianhao').click(function () {
+                num = parseFloat($('#shuliang').val());     //专门用于把字符串转换成数值
+                if (num > 1) {
+                    $('#shuliang').val(num - 1);
+                    $('#shuliang').blur();
+                }
+            });
+
+            $('#shuliang').blur(function () {
+                    num = parseInt($('#shuliang').val());     //val() 方法返回或设置被选元素的值。
+                    if (num) {        //如果不为空
+                        if (num < 1)        //如果小于1
+                            num = 1;
+                        price = parseFloat($('#gprice').text());    //text() 方法方法设置或返回被选元素的文本内容。
+                        total = num * price;
+                        $('#shuliang').val(num);
+                        $('#gtotal').text(total.toFixed(2) + '元');  //toFixed(num) 方法可把原来的数四舍五入为小数位数为num的数字。
+                    } else {
+                        $('#shuliang').val(1);
+                        price = parseFloat($('#gprice').text());    //text() 方法方法设置或返回被选元素的文本内容。
+                        total = 1.0 * price;
+                        $('#gtotal').text(total.toFixed(2) + '元');  //toFixed(num) 方法可把原来的数四舍五入为小数位数为num的数字。
+                    }
+                }
+            );
+            var $add_x = $('#add_cart').offset().top;
+            var $add_y = $('#add_cart').offset().left;
+
+            var $to_x = $('#show_count').offset().top;
+            var $to_y = $('#show_count').offset().left;
+
+            $('#add_cart').click(function () {
+                $(".add_jump").css({'left': $add_y + 80, 'top': $add_x + 10, 'display': 'block'});
+                if ($('.login_btn').text().indexOf('登录') >= 0) {
+                    alert("请先登录后再购买");
+                    location.href = '/user/login/';
+                    return;
+                }
+                //动画
+                $(".add_jump").stop().animate({
+                        'left': $to_y + 7,
+                        'top': $to_x + 7
+                    },
+                    "fast",
+                    function () {
+                        $(".add_jump").fadeOut('fast'
+                            //     function(){
+                            //     $('#show_count').html();
+                            // }
+                        );
+                    }
+                );
+                //异步      ajax
+                s1();
+            });
+
+            function s1() {
+                num = parseInt($('.num_show').val());
+                $.get('/cart/add{{goods.id}}_' + num + '/', function (data) {
+                    $('#show_count').text(data.count);
+                });
+            }
+        })
+    </script>
+
+</head>
+<body>
+
+{#<div class="container" style="">#}
+<p style="text-align: center;font-size: 28px;padding: 20px;">小可爱的购物车</p>
+    <ul class="cart_list_th clearfix" style="background-color: #edfff9">
+        <li class="col01" style='width: 24%'>商品图片</li>
+        <li class="col02" style='width: 20%'>商品名称</li>
+        <li class="col03" style='width: 20%'>商品价格</li>
+        <li class="col04" style='width: 15%' >数量</li>
+        <li class="col06" style='width: 21%'>操作</li>
+    </ul>
+    {% for cart in carts %}
+        <ul class="cart_list_td clearfix" style="background-color: ivory" id='{{ cart.id }}'>
+            <li class="col01"><input type="checkbox" name="" checked="checked"></li>
+            <li class="col02" style='width: 17%'><a href="{% url 'MyStarbucks:detail' cart.goods.id %}"><img
+                    src="{% static cart.goods.image %}" alt=""></a></li>
+            <li class="col03" style='width: 5%'></li>
+            <li class="col04" style='width: 18%'><a href="{% url 'MyStarbucks:detail' cart.goods.id %}">{{ cart.goods.title }}</a></li>
+            <li class="col05" style='width: 20%'>{{ cart.goods.price }}</li>
+            <li class="col06" style='width: 16%'>
+                <div class="num_add">
+                    <a href="/MyStarbucks/edit?id={{ cart.goods.id }}" class="add fl">+</a>
+                    <input type="text" class="num_show fl" name="count" value="{{ cart.count }}">
+                    <a href="/MyStarbucks/edit1?id={{ cart.goods.id }}" class="minus fl" name="sub">-</a>
+                </div>
+            </li>
+            <li class="col08" style='width: 19%'><a href="{% url 'MyStarbucks:delete' cart.id %}" class="delete">删除</a></li>
+        </ul>
+    {% endfor %}
+    <ul class="settlements" style="background-color: ivory">
+        <li class="col01"><input type="checkbox" name="" checked="checked" id="check_all"></li>
+        <li class="col02">全选</li>
+        <li class="col03" style="padding-left: 150px;padding-top: 12px">
+            共计<b name="money">{{ num }}</b>件商品
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            合计(不含运费)：<span>¥</span><em>{{ prices }}</em>
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <em ><a href="{% url 'MyStarbucks:result' %}" style="color: red">结算</a></em>
+        </li>
+    </ul>
+    <h2 style="margin-top: 20px;">
+        <a href="{% url 'MyStarbucks:index' %}" style="margin-left: 110px;font-size: 20px;">
+        《《《 回到首页
+        </a>
+    </h2>
+    <h2 style="margin-top: -20px;">
+        <a href="{% url 'MyStarbucks:drink' %}" style="margin-left: 1140px;font-size: 20px;">
+        》》》点我继续购物
+        </a>
+    </h2>
+</body>
+</html>

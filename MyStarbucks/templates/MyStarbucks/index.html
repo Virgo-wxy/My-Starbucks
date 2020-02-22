@@ -1,0 +1,404 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<script type="text/javascript" src="{% static 'js/my.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/fastclick.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/pages.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/polyfill.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/slick.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/tracker.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/vendor.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/wechat.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  	<script type="text/javascript" async="" src="{% static 'js/analytics.js' %}"></script>
+  	<script src="{% static 'js/hm.js' %}"></script>
+  	<script async="" src="{% static 'js/gtm.js' %}"></script>
+  	<script>window.dataLayer = [];</script>
+	<script>
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});
+		var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+		j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+		f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MGKBKT5');
+	</script>
+	<script>
+		  var _hmt = _hmt || [];
+		  (function() {
+		    var hm = document.createElement('script');
+		    hm.src = 'https://hm.baidu.com/hm.js?8dfa8fb7ffbd0407c8562282198066a6';
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(hm, s);
+		  })();
+	</script>
+
+    <!-- 导航栏 -->
+    <script>
+        $(window).scroll(function () {
+            if ($(".navbar").offset().top > 50) {
+            	$(".navbar-fixed-top").addClass("top-nav");
+            }else{
+            	$(".navbar-fixed-top").removeClass("top-nav");
+            }
+        })
+    </script>
+    <style type="text/css">
+		.row{
+			padding-left:100px;
+		}
+		.media-body li{
+			font-size:16px;
+		}
+		h2{
+			text-align:center;
+			color:#CDA661;
+			margin-top:40px;
+		}
+		b{
+			float:right;
+
+		}
+		/*导航栏*/
+        html, body {
+          width:100%;height:500px;
+          } /*非常重要的样式让背景图片100%适应整个屏幕*/
+        .bg {
+          display: table;
+          width: 100%;
+          height: 100%;
+          padding: 100px 0;
+          text-align: center;
+          color: #fff;background: url("{% static 'image/kv-2.jpg' %}") no-repeat bottom center;
+          background-color: #000;background-size: cover;
+        }
+        .my-navbar {
+          padding:20px 0;
+          transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+        .my-navbar a{
+          font-size:18px;
+          background:transparent !important;color:#fff !important
+
+        }
+        .my-navbar a:hover {
+          color:#CDA661 !important;background:transparent;outline:0
+        }
+        .my-navbar a {
+          transition: color 0.5s ease-in-out;
+          }/*-webkit-transition ;-moz-transition*/
+        .top-nav {
+          padding:0;background:#000;
+        }
+        button.navbar-toggle {
+          background-color:#fbfbfb;
+          }/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+/*        button.navbar-toggle > span.icon-bar {
+          background-color:#dedede}*/
+        .container-fluid {
+        	padding-left:170px;
+        	padding-right:170px;
+
+        }
+   </style>
+</head>
+
+<body>
+<!-- 导航栏 -->
+<nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+    <div class="container-fluid">
+        <div>
+          <ul class="nav navbar-nav">
+          	  <li><a href="http://www.baidu.com">首页</a></li>
+
+              <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                    菜单
+                      <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu" style='background:black'>
+                      <li><a href="{% url 'MyStarbucks:product_list' %}">季度精选</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{% url 'MyStarbucks:drink' %}">饮料</a></li>
+                      <li><a href="{% url 'MyStarbucks:coffee' %}">咖啡</a></li>
+                      <li><a href="{% url 'MyStarbucks:food' %}">美食</a></li>
+                  </ul>
+              </li>
+              <li><a href="{% url 'MyStarbucks:guest_book' %}">联系我们</a></li>
+              <li><a href="{% url 'MyStarbucks:newview' %}">企业新闻</a></li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right myul">
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'MyStarbucks:manage_index' %}">{{ user.username }}</a></li>
+                    <li><a href="{% url 'MyStarbucks:logout' %}">退出</a></li>
+                {% else %}
+                    <li><a href="{% url 'MyStarbucks:regist' %}">注册</a></li>
+                    <li><a href="{% url 'MyStarbucks:login' %}">登录</a></li>
+                {% endif %}
+            </ul>
+            <!-- 导航栏中的表单 -->
+          <form id='aa' class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="输入要搜索的内容">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+         </form>
+        </div>
+    </div>
+</nav>
+ <div class="bg"></div>
+
+<!-- 中部开始 -->
+<div class="container">
+ 	<section class="promotion">
+	  <div class="wrapper fluid">
+	    <div class="grid columns-3 padded-2">
+	      <a id="home-left-campaign" href="hthttp://www.baidu.com" onclick='if (window.innerWidth >= 800) this.href="https://starbucks.tmall.com/p/rd614147.htm";' target="_blank"><img src="{% static 'image/starbucks-tmall-1217-cn.jpg'%}">
+	      </a>
+	      <a id="home-middle-campaign" href="http://www.baidu.com" target="_blank"><img src="{% static 'image/starbucks-design-studio-web-china.jpg' %}"></a>
+	      <a id="home-right-campaign" href="http://www.baidu.com" target="_blank"><img src="{% static 'image/homepage-career-cn.jpg' %}"></a>
+	    </div>
+	  </div>
+	</section>
+</div>
+
+<div class="container">
+<!-- 滚动条 -->
+	<div class="row">
+		 <div class="col-md-11">
+			<section class="coffeehouse">
+			  <div class="wrapper center">
+			    <h2 class="wrapper-mobile">1912 派克街 | 咖啡星讲堂</h2>
+			    <p class="light wrapper-mobile">了解更多星巴克咖啡文化</p>
+			  </div>
+			  <div class="scroll-wrapper">
+			    <div class="scroll-arrow scroll-arrow-left hidden">
+			      <img src="{% static 'image/icon-scroll-left.svg' %}">
+			    </div>
+			    <div class="scroll">
+			      <div class="wrapper">
+			        <div class="scroll-items">
+			          <a id="home-blog-origin" target="_blank" href="http://www.baidu.com" class="thumbnail rect card">
+			            <div class="preview" style="background-image: url({% static 'image/kv-0-mobile.jpg'%})"></div>
+			            <span class="tag">咖啡知识</span>
+			            <strong>咖啡的起源与培植</strong>
+			          </a>
+			          <a id="home-blog-fundamentals" target="_blank" href="http://www.baidu.com" class="thumbnail rect card">
+			            <div class="preview" style="background-image: url({% static 'image/kv-1-mobile.jpg' %})"></div>
+			            <span class="tag">咖啡品鉴</span>
+			            <strong>咖啡调制</strong>
+			          </a>
+			          <a id="home-blog-roast" target="_blank" href="http://www.baidu.com" class="thumbnail rect card">
+			            <div class="preview" style="background-image: url({% static 'image/kv-2-mobile.jpg' %})"></div>
+			            <span class="tag">咖啡知识</span>
+			            <strong>咖啡烘焙</strong>
+			          </a>
+			          <a id="home-blog-pour" target="_blank" href="http://www.baidu.com" class="thumbnail rect card">
+			            <div class="preview" style="background-image: url({% static 'image/kv-2-mobile.jpg' %})"></div>
+			            <span class="tag">咖啡品鉴</span>
+			            <strong>手冲咖啡</strong>
+			          </a>
+			          <a id="home-blog-pour" target="_blank" href="http://www.baidu.com" class="thumbnail rect card">
+			            <div class="preview" style="background-image: url({% static 'image/kv-2-mobile.jpg' %})"></div>
+			            <span class="tag">咖啡品鉴</span>
+			            <strong>手冲咖啡</strong>
+			          </a>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="scroll-arrow scroll-arrow-right">
+			      <img src="{% static 'image/icon-scroll-right.svg' %}">
+			    </div>
+			  </div>
+			  </section>
+
+		</div>
+	</div>
+</div>
+
+<!-- 使命和价值观 -->
+<div class="container">
+	<h2>我们的使命和价值观</h2>
+  <!-- 右对齐 -->
+  <div class="row">
+  	<div class="col-md-11"> 	<!-- 多媒体 -->
+	    <div class="flex flex-column tablet-flex-row">
+	      <div class="tablet-flex1 flex flex-column">
+	        <p>激发并孕育人文精神，每人，每杯，每个社区。</p>
+	        <p>以我们的伙伴、咖啡和顾客为核心，我们努力践行以下价值观：</p>
+	        <ul class="margin-1">
+	          <li>营造一种温暖而有归属感的文化，欣然接纳和欢迎每一个人。</li>
+	          <li>积极行动，勇于挑战现状，打破陈规，以创新方式实现公司与伙伴的共同成长。</li>
+	          <li>在每个连接彼此的当下，我们专注投入，开诚相见，互尊互敬。</li>
+	          <li>对于每件事，我们都竭尽所能，做到最好，敢于担当。</li>
+	        </ul>
+	        <a target="_blank" id="about-join-us" class="button self-center tablet-self-start" href="http://www.baidu.com">加入我们</a>
+	      </div>
+	      <div class="tablet-flex1 flex flex-column justify-center">
+	        <img src="{% static 'image/xw1.jpg' %}" alt="Starbucks China">
+	      </div>
+	    </div>
+	</div>
+  </div>
+</div>
+
+<!-- 新闻 -->
+<div class="container">
+ <h2>最新新闻</h2>
+    <div class="row">
+  		<div class="col-md-11">
+		    <ul class="list">
+		      <li id="about-article-alibaba-i-store-launch-01">
+		        <a href="http://www.baidu.com" class="card margin-1 flex news relative">
+				  <div class="preview flex1" style="background-image: url({% static 'image/new1.jpg' %})"></div>
+				  <div class="wrapper section flex2">
+				    <h3 class="title headline">业内首创 一站式品牌体验平台正式上线<br>持续探索 星巴克数字创新赋能情感连接</h3>
+				    <p class="hidden tablet-block">
+				  星巴克线上新零售智慧门店今日上线。这是业内首个多渠道、跨平台的一站式新零售品牌体验平台；亦是阿里巴巴集团首次向品牌方开放其智能集成生态系统，与星巴克一起打造的具有行业突破意义的消费体验创新
+				      星巴克App、手淘、天猫或支付宝任一终端均可访问，无需切换不同应用
+				      星巴克与阿里巴巴会员系统全面打通，上述任一App均可累积...</p>
+				  </div>
+				</a>
+			  </li>
+		      <li id="about-article-expo-2">
+		        <a href="http://www.baidu.com" class="card margin-1 flex news relative">
+				  <div class="preview flex1" style="background-image: url({% static 'image/new2.jpg' %})"></div>
+				  <div class="wrapper section flex2">
+			    	<h3 class="title headline">深耕20年  在中国 为中国<br>星巴克全力支持2018首届 中国国际进口博览会</h3>
+				    <p class="hidden tablet-block">（11月5日 上海）
+					今日，首届中国国际进口博览会在沪隆重开幕。作为此次盛会的咖啡支持企业，星巴克在国家会展中心主会场、平行论坛以及新闻媒体中心等场地共设23个点位，派驻250位经过严格甄选和密集培训的资深咖啡师，为现场参会者与媒体朋友免费提供咖啡茶歇服务，预计现场将供应超过6万杯精选咖啡和茶饮。星巴克去年首次引入中国的意大利焙意之（Princi）品牌...
+					</p>
+				  </div>
+				</a>
+		      </li>
+		      <li id="about-article-yunnan-3">
+		        <a href="http://www.baidu.com" class="card margin-1 flex news relative">
+			    	<div class="preview flex1" style="background-image: url({% static 'image/new3.jpg' %})"></div>
+					<div class="wrapper section flex2">
+					    <h3 class="title headline">星巴克携手中国扶贫基金会助力云南咖啡种植区发展<br>造福30个村庄5万咖农与6千学龄儿童</h3>
+					    <p class="hidden tablet-block">
+						  依托深耕云南六年建立的基础，星巴克将继续致力于云南咖啡种植区的发展，计划到2023年，实现造福云南全省30个村庄5万名咖农及其6,000名学龄儿童的目标
+						  携手中国扶贫基金会（CFPA），率先试点云南保山咖啡种植区，为咖农提供专业培训，并为贫困咖农的下一代提供健康检查和学习指导
+						</p>
+					</div>
+				</a>
+			  </li>
+		    </ul>
+	   </div>
+   </div>
+</div>
+
+<!-- 历史 -->
+<div class="container">
+ <h2>星巴克在中国</h2>
+  <!-- 右对齐 -->
+  <div class="row">
+  	<div class="col-md-11">
+		  <ul class="grid columns-3 padded-2">
+		    <li style='text-align:center'>
+		      <a href="http://www.baidu.com">历史</a>
+		      <div class="card colored">
+		        <div class="wrapper relative z0">
+		          <div class="display-2 bold z0">
+		            1999
+		            <div class="caption regular white">星巴克内地第一家门店</div>
+		          </div>
+		        </div>
+		        <div class="content">
+		          <p>
+		            星巴克于1999年1月，在北京中国国际贸易中心开设中国内地第一家门店。对星巴克来说，中国目前已成为星巴克发展速度最快、最大的海外市场。
+		          </p>
+		        </div>
+		      </div>
+		    </li>
+		    <li style='text-align:center'>
+		      <a href="http://www.baidu.com">门店</a>
+		      <div class="card colored">
+		        <div class="wrapper relative z0">
+		          <div class="display-2 bold z0">
+		            3,600
+		            <div class="caption regular white">多家门店遍布超过150个城市</div>
+		          </div>
+		        </div>
+		        <div class="content">
+		          <p>
+		            目前，星巴克已经在中国150多个城市开设了超过3,600家门店，拥有近50,000名星巴克伙伴。这一独特优势使我们能够在每一天，通过每一家星巴克门店，践行我们的承诺。
+		          </p>
+		        </div>
+		      </div>
+		    </li>
+		    <li style='text-align:center'>
+		      <a href="http://www.baidu.com">社会责任</a>
+		      <div class="card colored">
+		        <div class="wrapper relative z0">
+		          <div class="display-2 bold z0">
+		            700,000
+		            <div class="caption regular white">小时社区服务</div>
+		          </div>
+		        </div>
+		        <div class="content">
+		          <p>
+		            进入中国以来，星巴克始终致力于回馈社会，对于中国社会的发展做出自己的一份贡献，在地方和全国范围内开展企业社会责任项目，增进了与社区和顾客的情感联系。
+		          </p>
+		        </div>
+		      </div>
+		    </li>
+		  </ul>
+	</div>
+  </div>
+</div>
+
+<!-- 折叠 -->
+<div class="container">
+  <h2>关于我们</h2>
+	<div class="row">
+  		<div class="col-md-11">
+	      <div class="card collapsible teasing margin2 collapsed" id="about-collapsable-background">
+	        <a class="header">
+	          <h3>背景</h3>
+	        </a>
+	        <div class="body">
+	          <div class="container">
+	            <p>自1999年进入中国以来，秉承“激发并孕育人文精神——每人、每杯、每个社区”的公司使命，我们始终致力于发展成为一家
+					与众不同的公司：在传承经典咖啡文化的同时，关爱我们的伙伴，为顾客提供超越期望的星巴克体验，并为所在社区的繁荣做出自己的贡献。目前，星巴克已经在中国内地150多个城市开设了3,600多家门店，拥有近50,000名星巴克伙伴。这一独特优势使我们能够在每一天，通过每一家星巴克门店，践行我们的承诺。</p>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="card collapsible teasing margin2 collapsed" id="about-collapsable-coffee">
+	        <a class="header">
+	          <h3>高品质的星巴克咖啡</h3>
+	        </a>
+	        <div class="body">
+	          <div class="container">
+	            <p>我们热爱我们的咖啡。我们相信通过一杯高品质的手工咖啡可以传递和分享真挚情感，而这样简单的行为或许可以为顾客提供一些
+					正能量。因此，星巴克始终致力于通过道德采购，烘焙并提供高品质的阿拉比卡咖啡豆。我们还在中国云南普洱建立了星巴克中国咖啡种植者支促进可持续种植规范在当地的推广，助力云南咖啡产业的发展。从一粒种子到一杯咖啡，每一个环节都倾入了星巴克的心意和努力，只为每一次光顾我们门店的顾客可以享受醇香的浓缩咖啡及其钟爱的咖啡饮品。</p>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="card collapsible teasing margin2 collapsed" id="about-collapsable-experience">
+	        <a class="header">
+	          <h3>独一无二的星巴克体验</h3>
+	        </a>
+	        <div class="body">
+	          <div class="container">
+	            <p>我们热爱我们的顾客。星巴克一直致力于为顾客提供始终如一的优质星巴克体验。同时，在对产品质量和服务精益求精的基础上，
+					星巴克强调创新，强调产品和服务的个性化，强调不断给顾客带来愉悦和惊喜。星巴克也充分尊重中国历史悠久的传统文化，在门店设计、地方面，完美地将当地习俗融合到星巴克体验之中。目前，我们在中国开设了7家向我们的咖啡传承致敬的旗舰店，它们分别位于北京嘉里中心、北京太古里、成都太古里、上海迪士尼度假区、深圳万象天地、苏州中心和北京坊。独特的星巴克数字平台，包括星巴克移动应用软件和星享俱乐部，帮助我们在门店以外建立与顾客的连接。星巴克始终致力于通过不断创新，建立我们和顾客之间的情感连接，同时激发他们在店内店外与更多人分享这些美好瞬间。2015年12月，星巴克推出天猫官方旗舰店，将独特的门店体验与线上“第四空间”体验紧密对接，这是星巴克第一个“互联网成战略合作，在中国领先的移动社交应用——微信上推出创新的社交礼品体验“用星说”，借此鼓励和激发数字时代的情感连接。此外，为了进一步满足中国消费者多样化的支付需求，星巴克中国门店已全面接入微信和支付宝。2018年8月，星巴克宣布与阿里巴巴集团达成新零售全面战略合作，通过一系列基于新零售的探索创新给中国的消费者带来更多惊喜。9月，星巴克官方线上订餐平台专星送™正式上线，通过星巴克APP和饿了么两大平台为顾客带来“用心，更多一度”的星巴克外送体验。
+				</p>
+	          </div>
+	        </div>
+	      </div>
+	   </div>
+  </div>
+</div>
+
+
+</body>
+</html>

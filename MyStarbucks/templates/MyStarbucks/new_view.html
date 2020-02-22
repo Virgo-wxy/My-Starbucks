@@ -1,0 +1,143 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>最新新闻</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+	<style type="text/css">
+		.new_view{
+			background-image: url({% static 'image/kv-starbucks-store.jpg' %});
+			height:340px;
+
+		}
+		.list{
+			  padding-left:60px;
+			  padding-right:60px;
+		}
+	</style>
+</head>
+<body>
+<div class="container" style='padding-left:50px'>
+   <div class="row">
+   	  <div class="col-md-11">
+
+		<div class="hero flex flex-column margin2 new_view">
+		    <section class="wrapper section title z1 white center flex-auto flex flex-column items-center self-center justify-center">
+		        <h1 class="white bold center">企业新闻</h1>
+		        <a href="http://www.baidu.com" class="button light-ghost" id="global-newsroom">了解星巴克全球新闻</a>
+		    </section>
+		</div>
+		<div>
+		    <ul class="list">
+		        <li>
+		            <a class="card margin-1 flex news relative">
+		                <div class="preview flex1" style="background-image: url({% static 'image/new1.jpg' %})"></div>
+		                <div class="wrapper section flex2">
+		                    <h3 class="title headline">业内首创 一站式品牌体验平台正式上线<br>持续探索 星巴克数字创新赋能情感连接</h3>
+		                    <p class="hidden tablet-block">
+		                        星巴克线上新零售智慧门店今日上线。这是业内首个多渠道、跨平台的一站式新零售品牌体验平台；亦是阿里巴巴集团首次向品牌方开放其智能集成生态系统，与星巴克一起打造的具有行业突破意义的消费体验创新
+		                        星巴克App、手淘、天猫或支付宝任一终端均可访问，无需切换不同应用
+		                        星巴克与阿里巴巴会员系统全面打通，上述任一App均可累积...</p>
+		                </div>
+		            </a>
+		        </li>
+
+		        <li>
+		            <a class="card margin-1 flex news relative">
+		                <div class="preview flex1" style="background-image: url({% static 'image/new2.jpg' %})"></div>
+		                <div class="wrapper section flex2">
+		                    <h3 class="title headline">深耕20年 在中国 为中国<br>星巴克全力支持2018首届<br>中国国际进口博览会</h3>
+		                    <p class="hidden tablet-block">（11月5日 上海）
+		                        今日，首届中国国际进口博览会在沪隆重开幕。作为此次盛会的咖啡支持企业，星巴克在国家会展中心主会场、平行论坛以及新闻媒体中心等场地共设23个点位，
+		                        派驻250位经过严格甄选和密集培训的资深咖啡师，为现场参会者与媒体朋友免费提供咖啡茶歇服务，预计现场将供应超过6万杯精选咖啡和茶饮。星巴克去年首
+		                        次引入中国的意大利焙意之（Princi）品牌...</p>
+		                </div>
+		            </a>
+		        </li>
+
+		        <li>
+		            <a class="card margin-1 flex news relative">
+		                <div class="preview flex1" style="background-image: url({% static 'image/new1.jpg' %})"></div>
+		                <div class="wrapper section flex2">
+		                    <h3 class="title headline">星巴克携手中国扶贫基金会助力云南咖啡种植区发展<br>造福30个村庄5万咖农与6千学龄儿童</h3>
+		                    <p class="hidden tablet-block">
+		                        依托深耕云南六年建立的基础，星巴克将继续致力于云南咖啡种植区的发展，计划到2023年，实现造福云南全省30个村庄5万名咖农及其6,000名学龄儿童的目标
+		                        携手中国扶贫基金会（CFPA），率先试点云南保山咖啡种植区，为咖农提供专业培训，并为贫困咖农的下一代提供健康检查和学习指导
+		                    </p>
+		                </div>
+		            </a>
+		        </li>
+
+		        <li>
+		            <a class="card margin-1 flex news relative">
+		                <div class="preview flex1"
+		                     style="background-image: url({% static 'image/new2.jpg' %})"></div>
+		                <div class="wrapper section flex2">
+		                    <h3 class="title headline">星巴克专星送™上线“足月”<br>覆盖京沪，再拓九城，新推“外送星厨”</h3>
+		                    <p class="hidden tablet-block">（10月18日 上海）
+		                        星巴克官方线上订餐平台专星送™于一个月前正式运行，率先为北京和上海的咖啡爱好者提供了“用心，更多一度”的星巴克外送体验。今天，星巴克宣布：北京、
+		                        上海现已基本完成专星送™门店全城覆盖，10月22日，专星送™将正式进驻广州、深圳等九个城市，星巴克将携手饿了么让更多顾客能够感受品质如一的外送体
+		                        验。
+		                    </p>
+		                </div>
+		            </a>
+		        </li>
+
+		        <li>
+		            <a class="card margin-1 flex news relative">
+		                <div class="preview flex1" style="background-image: url({% static 'image/new3.jpg' %})"></div>
+		                <div class="wrapper section flex2">
+		                    <h3 class="title headline">你好世界，云南来了！<br>2018星巴克咖啡文化节，万人举杯共赏高品质云南咖啡</h3>
+		                    <p class="hidden tablet-block">10月11日，备受咖啡爱好者期盼的星巴克咖啡文化节如期而至。这一次，星巴克
+		                        首次将精心烘焙的臻选云南咖啡豆带到全国3300多家星巴克门店，这款带有中国烙印的星巴克臻选™中国云南高雅庄园咖啡豆将在全国指定星巴克门店正式限量
+		                        供应。在此次咖啡文化节上，星巴克星级咖啡师将通过全国咖啡教室引领全国数万咖啡爱好者与一同品尝云南味道，领略咖啡风味、分享咖啡文化，更传递...</p>
+		                </div>
+		            </a>
+		        </li>
+
+		        <li>
+		            <a  class="card margin-1 flex news relative">
+		                <div class="preview flex1" style="background-image: url({% static 'image/new1.jpg' %})"></div>
+		                <div class="wrapper section flex2">
+		                    <h3 class="title headline">深耕中国20年 创造独特“家文化”<br>星巴克四度蝉联“中国最佳雇主”</h3>
+		                    <p class="hidden tablet-block">（2018年9月14日
+		                        上海）2018年度怡安（Aon）“中国最佳雇主”评选结果即日揭晓，星巴克中国从今年参选的110家企业中再次脱颖而出，第四次荣膺这一重量级荣誉称号。
+		                    </p>
+		                </div>
+		            </a>
+		        </li>
+
+		        <li>
+		            <a class="card margin-1 flex news relative">
+		                <div class="preview flex1" style="background-image: url({% static 'image/new2.jpg' %})"></div>
+		                <div class="wrapper section flex2">
+		                    <h3 class="title headline">星巴克与阿里巴巴达成新零售全面战略合作<br>打造行业标杆 革新消费体验</h3>
+		                    <p class="hidden tablet-block">
+		                        此次合作是星巴克与阿里巴巴两大行业领导者在其商业发展历程上的一大里程碑，双方将通过一系列基于新零售的探索创新给中国的消费者带来更多惊喜。
+		                        双方将共同打造具有行业突破意义的星巴克新零售智慧门店，基于天猫新零售方案横向打通星巴克和阿里生态系统的多个数字化消费者运营平台，实现全域消费场景下会员注册、权益兑换和服务场景的互联互通，突破零售消费生活的时...</p>
+		                </div>
+		            </a>
+		        </li>
+
+		        <li>
+		            <a class="card margin-1 flex news relative">
+		                <div class="preview flex1" style="background-image: url({% static 'image/new3.jpg' %})"></div>
+		                <div class="wrapper section flex2">
+		                    <h3 class="title headline">主题: 霍华德 致星巴克中国所有伙伴: 感谢您</h3>
+		                    <p class="hidden tablet-block">伙伴们：
+		                        我怀着无比激动的心情，期待着与你们中的许多人在上海和北京相聚，并对你们每天为星巴克所付出的汗水、热情、爱与责任表达我最诚挚的敬意。
+		                    </p>
+		                </div>
+		            </a>
+		        </li>
+		    </ul>
+		</div>
+
+	</div>
+  </div>
+</div>
+</body>
+</html>

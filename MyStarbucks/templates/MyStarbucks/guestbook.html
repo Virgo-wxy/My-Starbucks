@@ -1,0 +1,155 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>联系我们-留言</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/fastclick.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/pages.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/polyfill.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/slick.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/tracker.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/vendor.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/wechat.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  	<script type="text/javascript" async="" src="{% static 'js/analytics.js' %}"></script>
+  	<script src="js/hm.js"></script>
+  	<script async="" src="js/gtm.js"></script>
+		<style type="text/css">
+		.new_view{
+			background-image: url({% static 'image/contact-us-page-image.png' %});
+			height:340px;
+
+		}
+	</style>
+</head>
+<body>
+
+<div class="container" style='padding-left:50px'>
+   <div class="row">
+   	  <div class="col-md-11">
+			    <div class="hero flex flex-column new_view">
+			        <section
+			                class="wrapper section title z1 white center flex-auto flex flex-column items-center self-center justify-center">
+			            <h1 class="white bold center">联系我们</h1>
+			            <p>我们的工作时间为：周一至周日 9:00-18:00（节假日除外）。</p>
+			        </section>
+			    </div>
+
+			    <div class="wrapper section" style='padding:20px'>
+			        <div class="flex flex-column tablet-flex-row margin3">
+			            <div class="flex1 tablet-margin-r">
+			                <a href="mailto:customercarecn@starbucks.cn" class="card" id="contact-us-email">
+			                    <div class="caption"><span>邮箱地址</span><img src="{% static 'image/icon-message.svg' %}" class="icon"></div>
+			                    <strong class="break">customercarecn@starbucks.cn</strong>
+			                </a>
+			            </div>
+			            <div class="flex1" style='padding-left:20px'>
+			                <a href="tel:400-820-6998" class="card" id="contact-us-phone">
+			                    <div class="caption"><span>联系电话</span><img src="{% static 'image/icon-contact.svg' %}" class="icon"></div>
+			                    <strong>400-820-6998</strong>
+			                </a>
+			            </div>
+			        </div>
+
+			        <div class="card flex">
+			            <div class="flex1">
+			                <div class="section">
+			                    <div class="caption"><span>邮寄地址</span><img src="{% static 'image/icon-pen.svg' %}" class="icon"></div>
+			                    <strong class="fn padded-t-2">星巴克中国顾客关怀中心</strong>
+			                    <div class="adr">
+			                        上海市桂箐路65号新研大厦B座24楼（邮编 200233）
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+
+			    	<!-- 留言 -->
+				<section class="wrapper section section-help">
+				  <h2 class="category center" style='padding-top:15px'>留言</h2>
+				  <div class="card flex">
+			            <div class="flex1">
+			                <div class="section">
+					            <form action="{% url 'MyStarbucks:ask_guestbook' %}" method="post">
+                                    {% csrf_token %}
+{#					                    <tr>#}
+{#					                        <td class="field">标题：</td>#}
+{#					                        <td><input class="text" type="text" name="title"/></td>#}
+{#					                    </tr>#}
+					                    <tr>
+					                        <td class="field">留言内容：</td>
+					                        <td><textarea name="title"></textarea></td>
+					                    </tr>
+					                    <tr>
+					                        <td><label style='float:right'><input type="submit" name="submit" value="提交留言" /></label></td>
+					                    </tr>
+					            </form>
+			                </div>
+			            </div>
+			        </div>
+				</section>	
+				<!-- 问答 -->
+				<section class="wrapper section section-help">
+				  <h2 class="category center" style='padding-top:15px'>精选答案</h2>
+				  <ul class="list">
+
+				        <li id="section-1">
+				        	<article class="card collapsible teasing collapsed">
+							  <h2 class="header">什么是电子发票？</h2>
+							  <div class="body">
+							    <div class="container" style='width:700px'>
+							      <p>电子发票就是电子形式的发票，其发票代码、开票机构、金额等信息以及打印后版式均与纸质发票
+							      相同。电子发票在保管、查询、调阅时更加便捷。</p>
+
+							    </div>
+							  </div>
+							</article>
+						</li>     
+				        <li id="section-3">
+				        	<article class="card collapsible teasing collapsed">
+							  <h2 class="header">我是否可以使用电子发票报销？</h2>
+							  <div class="body">
+							    <div class="container" style='width:700px'>
+							      <p>可以。电子发票是经过国家税务局机关认可的有效凭证，打印版式电子发票与纸质发票具有同等的法律效力和基本用途。</p>
+
+							    </div>
+							  </div>
+							</article>
+						</li>
+						<li id="section-4">
+							<article class="card collapsible teasing collapsed">
+							  <h2 class="header">我该如何打印电子发票？</h2>
+							  <div class="body">
+							    <div class="container" style='width:700px'>
+							      <p>您在预留的邮箱中收到电子发票后，可使用普通打印机及A4纸打印。如遇到打印发票没有边框的情况，请在打印电子发票PDF文件时将“注释和表单”选项设置为“文档和标记”。</p>
+
+							    </div>
+							  </div>
+							</article>
+						</li>
+				        <li id="section-5"><article class="card collapsible teasing collapsed">
+							  <h2 class="header">如何验证电子发票的真伪？</h2>
+							  <div class="body">
+							    <div class="container" style='width:700px'>
+							      <p>电子发票下载成功后，您可通过当地国税局提供的电子发票查询平台，输入电子发票信息进行验证。</p>
+
+							    </div>
+							  </div>
+							</article>
+						</li>
+					</ul>
+				</section>
+
+		</div>
+
+	</div>
+</div>
+</div>
+</body>
+</html>
